@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
     const ws = useRef(null);
 
     useEffect(() => {
-        ws.current = new WebSocket('ws://https://sockets-chat-mgoh.onrender.com');
+        ws.current = new WebSocket('ws://sockets-chat-mgoh.onrender.com');
 
         ws.current.onmessage = (event) => {
             const data = JSON.parse(event.data);
